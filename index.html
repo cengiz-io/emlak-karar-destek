@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Emlak Karar Destek</title>
-    
+
+    <script>
+window.onerror = function(msg, src, line, col, err) {
+  document.body.style.cssText = 'padding:20px;font-family:monospace;white-space:pre-wrap';
+  document.body.textContent = 'JS Error:\n' + msg + '\n\nSource: ' + src + '\nLine: ' + line + ', Col: ' + col + '\n\nStack:\n' + (err && err.stack || 'N/A');
+  return true;
+};
+window.addEventListener('unhandledrejection', function(e) {
+  document.body.style.cssText = 'padding:20px;font-family:monospace;white-space:pre-wrap';
+  document.body.textContent = 'Unhandled Promise Rejection:\n' + (e.reason && e.reason.stack || e.reason || 'Unknown');
+});
+</script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
